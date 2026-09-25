@@ -694,6 +694,12 @@
       const payments = Array.from({ length: months }, (_, index) => index === months - 1 ? total - regular * (months - 1) : regular);
       return { total, overpay: Math.max(0, total - amount), monthly: regular, payments };
     }
+    function productFinanceLabel(amount) {
+      if (state.paymentMethod === 'balance') return 'Можно оплатить с баланса';
+      if (state.paymentMethod === 'orta' && state.financeTerm === 55) return `Грейс-период до ${Math.max(0, Number(state.financeModel.graceDays))} дней · Orta`;
+      const quote = financingQuote(amount);
+      return `${state.financeTerm} платежа · около ${amountText(quote.monthly)}/мес.`;
+    }
     function renderFinanceEstimate(amount) {
       const result = document.getElementById('finance-result');
       const method = state.paymentMethod;
@@ -738,7 +744,7 @@
     function renderMarketplace() {
       document.getElementById('market-categories').innerHTML = marketCategories.map(category => `<button class="category-chip${category === activeMarketCategory ? ' active' : ''}" type="button" data-market-category="${category}">${category}</button>`).join('');
       const visible = products.filter(product => activeMarketCategory === 'Все' || product.category === activeMarketCategory);
-      document.getElementById('product-grid').innerHTML = visible.map(product => `<article class="product-card"><div class="product-art" aria-hidden="true">${product.emoji}</div><div class="product-name">${escapeHtml(product.name)}</div><div class="product-meta">${escapeHtml(product.detail)}</div><div class="product-finance">от ${amountText(Math.round(product.price / 3))}/мес. · 3 платежа в демо</div><div class="product-price-row"><span class="product-price">${amountText(product.price)}</span><button class="product-add" type="button" data-add-product="${product.id}">В корзину</button></div></article>`).join('');
+      document.getElementById('product-grid').innerHTML = visible.map(product => `<article class="product-card"><div class="product-art" aria-hidden="true">${product.emoji}</div><div class="product-name">${escapeHtml(product.name)}</div><div class="product-meta">${escapeHtml(product.detail)}</div><div class="product-finance">${escapeHtml(productFinanceLabel(product.price))}</div><div class="product-price-row"><span class="product-price">${amountText(product.price)}</span><button class="product-add" type="button" data-add-product="${product.id}">В корзину</button></div></article>`).join('');
       const entries = marketEntries();
       const total = marketTotal();
       document.getElementById('basket-count').textContent = entries.reduce((sum, [, count]) => sum + count, 0);
