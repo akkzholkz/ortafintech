@@ -220,6 +220,7 @@
     .product-art { height: 82px; margin-bottom: 11px; border-radius: 10px; display: grid; place-items: center; font-size: 31px; background: linear-gradient(135deg,#f2f6ec,#e6f0e8); }
     .product-name { min-height: 29px; font-size: 10px; font-weight: 700; line-height: 1.4; }
     .product-meta { margin-top: 4px; color: var(--muted); font-size: 8px; }
+    .product-finance { margin-top: 7px; color: var(--green); font-size: 8px; font-weight: 650; }
     .product-price-row { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-top: 12px; }
     .product-price { font-size: 11px; font-weight: 750; white-space: nowrap; }
     .product-add { min-height: 30px; border: 0; border-radius: 9px; padding: 0 10px; color: white; background: var(--green); font-size: 9px; font-weight: 700; }
@@ -235,6 +236,50 @@
     .basket-total { display: flex; justify-content: space-between; padding: 13px 0; margin-top: 5px; border-top: 1px solid var(--line); font-size: 10px; }
     .basket-total strong { font-size: 12px; }
     .basket-empty { padding: 20px 0; color: var(--muted); text-align: center; font-size: 10px; }
+    .market-finance-banner { max-width: 1120px; margin: 0 0 18px; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 18px; border: 1px solid #dce8dd; border-radius: 17px; background: linear-gradient(115deg,#edf6ec,#f8faf5 58%,#e4efe5); }
+    .market-finance-copy { max-width: 470px; }
+    .market-finance-copy .eyebrow { margin-bottom: 6px; }
+    .market-finance-copy strong { display: block; font-size: 16px; letter-spacing: -.035em; }
+    .market-finance-copy p { margin: 6px 0 0; color: #69766d; font-size: 10px; line-height: 1.5; }
+    .orta-banner-card { position: relative; width: 220px; min-height: 118px; overflow: hidden; flex: 0 0 auto; padding: 14px 15px; border-radius: 13px; color: white; background: linear-gradient(130deg,#194c38,#122820); box-shadow: 0 9px 20px rgba(18,78,57,.12); }
+    .orta-banner-card:after { content: ""; position: absolute; width: 120px; height: 120px; right: -44px; bottom: -73px; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; box-shadow: 0 0 0 17px rgba(255,255,255,.045),0 0 0 35px rgba(255,255,255,.035); }
+    .orta-banner-top, .orta-banner-number, .orta-banner-limit { position: relative; z-index: 1; }
+    .orta-banner-top { display: flex; align-items: center; justify-content: space-between; color: #d2e0d6; font-size: 8px; letter-spacing: .08em; }
+    .orta-banner-top strong { color: white; font-size: 15px; letter-spacing: -.04em; }
+    .orta-banner-number { margin-top: 18px; font-size: 12px; letter-spacing: .16em; }
+    .orta-banner-limit { margin-top: 10px; color: #d2e0d6; font-size: 8px; }
+    .orta-banner-limit strong { color: white; font-size: 9px; }
+    .basket-section-label { margin: 16px 0 8px; color: #66736c; font-size: 9px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .finance-choices { display: grid; gap: 7px; }
+    .finance-choice { width: 100%; min-width: 0; padding: 9px; display: grid; grid-template-columns: 28px minmax(0,1fr) 15px; gap: 8px; align-items: center; text-align: left; border: 1px solid var(--line); border-radius: 11px; color: var(--ink); background: #fff; transition: .15s ease; }
+    .finance-choice:hover { border-color: #bfd2c3; }
+    .finance-choice[aria-pressed="true"] { border-color: #64a37a; background: #f5faf5; box-shadow: 0 0 0 2px rgba(42,119,74,.07); }
+    .finance-icon { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 9px; color: var(--green-dark); background: var(--green-soft); font-size: 10px; font-weight: 800; }
+    .finance-icon.partner { color: #695235; background: #f6efdf; }
+    .finance-icon.balance { color: #4f6374; background: #eaf0f4; }
+    .finance-choice-copy { min-width: 0; }
+    .finance-choice-copy strong { display: block; font-size: 9px; line-height: 1.25; }
+    .finance-choice-copy small { display: block; margin-top: 3px; color: var(--muted); font-size: 8px; line-height: 1.3; }
+    .finance-radio { width: 12px; height: 12px; border: 1px solid #c9d3cc; border-radius: 50%; }
+    .finance-choice[aria-pressed="true"] .finance-radio { border: 4px solid var(--green); }
+    .finance-term-wrap { margin-top: 12px; }
+    .finance-term-wrap label { display: block; margin: 0 0 6px; color: #55635b; font-size: 9px; font-weight: 700; }
+    .finance-term { width: 100%; min-height: 37px; border: 1px solid var(--line); border-radius: 9px; padding: 0 10px; color: var(--ink); background: white; font-size: 9px; }
+    .finance-result { margin-top: 10px; padding: 12px; border: 1px solid #e6ece6; border-radius: 11px; background: #f8faf7; }
+    .finance-result-title { color: #738078; font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .finance-result-main { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 8px; }
+    .finance-result-main span { color: #647168; font-size: 9px; }
+    .finance-result-main strong { font-size: 12px; text-align: right; }
+    .finance-result-meta { margin-top: 6px; color: #748078; font-size: 8px; line-height: 1.45; }
+    .finance-schedule { display: flex; justify-content: space-between; gap: 5px; margin-top: 9px; padding-top: 8px; border-top: 1px solid #e7ece7; color: #5e6c63; font-size: 8px; }
+    .finance-warning { margin-top: 7px; color: #a2533e; font-size: 8px; line-height: 1.4; }
+    .finance-note { margin: 8px 0 0; color: #8a948d; font-size: 8px; line-height: 1.45; }
+    .finance-assumptions { margin-top: 11px; border-top: 1px solid #eff2ef; padding-top: 10px; }
+    .finance-assumptions summary { cursor: pointer; color: var(--green); font-size: 8px; font-weight: 700; }
+    .assumption-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin-top: 10px; }
+    .assumption-field label { display: block; min-height: 21px; margin-bottom: 4px; color: #768179; font-size: 7px; line-height: 1.35; }
+    .assumption-field input { width: 100%; height: 31px; border: 1px solid var(--line); border-radius: 8px; padding: 0 8px; font-size: 9px; }
+    .assumption-helper { grid-column: 1/-1; margin: 0; color: #929b94; font-size: 7px; line-height: 1.45; }
     @media (max-width: 1100px) {
       .app-shell { grid-template-columns: 220px minmax(0,1fr); }
       .main { padding: 0 25px 32px; }
@@ -277,6 +322,8 @@
       .txn-date { font-size: 8px; }
       .history-head { font-size: 8px; }
       .linked-card-list, .form-row, .market-layout, .qr-layout { grid-template-columns: 1fr; }
+      .market-finance-banner { align-items: stretch; flex-direction: column; }
+      .orta-banner-card { width: 100%; }
       .qr-content { grid-template-columns: 1fr; justify-items: center; text-align: center; }
       .qr-content .qr-copy { width: 100%; }
     }
@@ -436,10 +483,32 @@
       </section>
 
       <section class="page" id="page-market" aria-labelledby="market-title">
-        <div class="page-heading"><div><div class="eyebrow">Покупки в приложении</div><h1 id="market-title">Маркет</h1><p class="subheading">Каталог и оформление тестового заказа с демо-баланса.</p></div></div>
+        <div class="page-heading"><div><div class="eyebrow">Покупки в приложении</div><h1 id="market-title">Маркет</h1><p class="subheading">Выберите товар и сравните, как его оплатить: балансом, частями или кредитной картой Orta.</p></div></div>
+        <section class="market-finance-banner" aria-label="Кредитная карта Orta в демо-маркете">
+          <div class="market-finance-copy"><div class="eyebrow">Новая возможность · демо</div><strong>Покупайте сейчас, платите в своём темпе</strong><p>Сравните покупку по кредитной карте Orta с моделями рассрочки Alif Nasiya и Yandex Split.</p></div>
+          <div class="orta-banner-card"><div class="orta-banner-top"><strong>orta</strong><span>DEMO CREDIT</span></div><div class="orta-banner-number">•••• &nbsp; •••• &nbsp; •••• &nbsp; 2048</div><div class="orta-banner-limit">Доступный лимит в модели: <strong id="market-credit-available">12 000 000 UZS</strong></div></div>
+        </section>
         <div class="market-layout">
           <section class="market-panel panel"><div class="panel-title-row"><h2 class="panel-title">Для вас</h2><span class="status">ДЕМО</span></div><div class="market-categories" id="market-categories"></div><div class="product-grid" id="product-grid"></div></section>
-          <aside class="basket-panel panel"><div class="panel-title-row"><h2 class="panel-title">Корзина</h2><span class="basket-count" id="basket-count">0</span></div><div class="basket-list" id="basket-list"></div><div class="basket-total"><span>Итого</span><strong id="basket-total">0 UZS</strong></div><button class="btn-primary full" type="button" id="checkout-marketplace">Оформить демо-заказ</button><div class="helper">Покупка никуда не отправляется.</div></aside>
+          <aside class="basket-panel panel"><div class="panel-title-row"><h2 class="panel-title">Корзина</h2><span class="basket-count" id="basket-count">0</span></div><div class="basket-list" id="basket-list"></div><div class="basket-total"><span>Итого</span><strong id="basket-total">0 UZS</strong></div>
+            <div class="basket-section-label">Способ оплаты</div>
+            <div class="finance-choices" id="market-payment-choices" role="group" aria-label="Выберите способ оплаты">
+              <button class="finance-choice" type="button" data-payment-method="orta" aria-pressed="true"><span class="finance-icon">O</span><span class="finance-choice-copy"><strong>Кредитная карта Orta</strong><small>Грейс-период или равные платежи</small></span><span class="finance-radio"></span></button>
+              <button class="finance-choice" type="button" data-payment-method="alif" aria-pressed="false"><span class="finance-icon partner">A</span><span class="finance-choice-copy"><strong>Alif Nasiya</strong><small>Сценарий партнёрской рассрочки</small></span><span class="finance-radio"></span></button>
+              <button class="finance-choice" type="button" data-payment-method="split" aria-pressed="false"><span class="finance-icon partner">Y</span><span class="finance-choice-copy"><strong>Yandex Split</strong><small>Сценарий партнёрской рассрочки</small></span><span class="finance-radio"></span></button>
+              <button class="finance-choice" type="button" data-payment-method="balance" aria-pressed="false"><span class="finance-icon balance">↗</span><span class="finance-choice-copy"><strong>Баланс Orta</strong><small>Оплата всей суммы сейчас</small></span><span class="finance-radio"></span></button>
+            </div>
+            <div class="finance-term-wrap" id="finance-term-wrap"><label for="finance-term">Срок оплаты</label><select class="finance-term" id="finance-term"><option value="55">До конца грейс-периода</option><option value="3">3 месяца</option><option value="6">6 месяцев</option><option value="12">12 месяцев</option></select></div>
+            <div class="finance-result" id="finance-result" aria-live="polite"></div>
+            <details class="finance-assumptions"><summary>Изменить параметры демо-модели</summary><div class="assumption-grid">
+              <div class="assumption-field"><label for="orta-limit-model">Лимит Orta, UZS</label><input id="orta-limit-model" type="number" min="0" step="100000" value="12000000"></div>
+              <div class="assumption-field"><label for="orta-apr-model">Ставка Orta, % годовых</label><input id="orta-apr-model" type="number" min="0" max="100" step="1" value="36"></div>
+              <div class="assumption-field"><label for="orta-grace-model">Грейс-период, дней</label><input id="orta-grace-model" type="number" min="0" max="120" step="1" value="55"></div>
+              <div class="assumption-field"><label for="partner-markup-model">Надбавка клиенту партнёра, %</label><input id="partner-markup-model" type="number" min="0" max="100" step="0.5" value="0"></div>
+              <p class="assumption-helper">Все цифры — черновые параметры для обсуждения, не оферта. Комиссию магазина партнёру и финальные условия нужно подтвердить отдельно.</p>
+            </div></details>
+            <button class="btn-primary full" type="button" id="checkout-marketplace">Перейти к расчёту</button><p class="finance-note">Партнёры и банк-эмитент не подключены. Заказ и график будут только демо.</p>
+          </aside>
         </div>
       </section>
 
@@ -509,10 +578,14 @@
       { id: 'mobile', name: 'Пакет связи', category: 'Связь', detail: 'Пополнение · демо', emoji: '📱', price: 35000 },
       { id: 'ride', name: 'Поездка по городу', category: 'Сервисы', detail: 'Тестовый заказ поездки', emoji: '🚕', price: 46000 },
       { id: 'cinema', name: 'Билет в кино', category: 'Досуг', detail: 'Сеанс · тестовый билет', emoji: '🎟️', price: 95000 },
-      { id: 'market-box', name: 'Фрукты на неделю', category: 'Продукты', detail: 'Демо-магазин · доставка сегодня', emoji: '🍎', price: 54000 }
+      { id: 'market-box', name: 'Фрукты на неделю', category: 'Продукты', detail: 'Демо-магазин · доставка сегодня', emoji: '🍎', price: 54000 },
+      { id: 'phone-orta', name: 'Смартфон Orta One', category: 'Электроника', detail: 'Магазин техники · демо', emoji: '📱', price: 4500000 },
+      { id: 'tablet-flex', name: 'Планшет Flex', category: 'Электроника', detail: 'Магазин техники · демо', emoji: '📟', price: 2800000 },
+      { id: 'laptop-travel', name: 'Ноутбук Travel', category: 'Электроника', detail: 'Магазин техники · демо', emoji: '💻', price: 9900000 }
     ];
+    const initialFinanceModel = { ortaLimit: 12000000, ortaApr: 36, graceDays: 55, partnerMarkup: 0 };
     const initialProfile = { name: 'Алина Тестовая', contact: '000 000 00 00' };
-    let state = { balance: initialBalance, currency: 'UZS', transactions: structuredClone(initialTransactions), frozen: false, transferType: 'phone', externalCards: structuredClone(initialExternalCards), profile: { ...initialProfile }, cart: {} };
+    let state = { balance: initialBalance, currency: 'UZS', transactions: structuredClone(initialTransactions), frozen: false, transferType: 'phone', externalCards: structuredClone(initialExternalCards), profile: { ...initialProfile }, cart: {}, ortaDebt: 0, paymentMethod: 'orta', financeTerm: 55, financeModel: { ...initialFinanceModel } };
     let pendingAction = null;
     let activeMarketCategory = 'Все';
     let toastTimer;
@@ -600,16 +673,78 @@
       }
       target.innerHTML = cells;
     }
-    const marketCategories = ['Все', 'Продукты', 'Еда', 'Связь', 'Сервисы', 'Досуг'];
+    const marketCategories = ['Все', 'Продукты', 'Еда', 'Связь', 'Сервисы', 'Досуг', 'Электроника'];
+    function marketEntries() { return Object.entries(state.cart).filter(([, count]) => count > 0); }
+    function marketTotal() { return marketEntries().reduce((sum, [id, count]) => sum + products.find(product => product.id === id).price * count, 0); }
+    function financingQuote(amount) {
+      if (!amount) return { total: 0, overpay: 0, monthly: 0, payments: [] };
+      if (state.paymentMethod === 'balance') return { total: amount, overpay: 0, monthly: amount, payments: [amount] };
+      if (state.paymentMethod === 'orta' && state.financeTerm === 55) return { total: amount, overpay: 0, monthly: amount, payments: [amount] };
+      const months = Number(state.financeTerm);
+      if (state.paymentMethod === 'orta') {
+        const monthlyRate = Math.max(0, Number(state.financeModel.ortaApr)) / 1200;
+        const monthly = monthlyRate === 0 ? amount / months : amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+        const total = Math.round(monthly * months);
+        const regular = Math.round(monthly);
+        const payments = Array.from({ length: months }, (_, index) => index === months - 1 ? total - regular * (months - 1) : regular);
+        return { total, overpay: Math.max(0, total - amount), monthly: regular, payments };
+      }
+      const total = Math.round(amount * (1 + Math.max(0, Number(state.financeModel.partnerMarkup)) / 100));
+      const regular = Math.round(total / months);
+      const payments = Array.from({ length: months }, (_, index) => index === months - 1 ? total - regular * (months - 1) : regular);
+      return { total, overpay: Math.max(0, total - amount), monthly: regular, payments };
+    }
+    function renderFinanceEstimate(amount) {
+      const result = document.getElementById('finance-result');
+      const method = state.paymentMethod;
+      const methodNames = { orta: 'Кредитная карта Orta', alif: 'Alif Nasiya · демо', split: 'Yandex Split · демо', balance: 'Баланс Orta' };
+      document.querySelectorAll('[data-payment-method]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.paymentMethod === method)));
+      document.getElementById('finance-term-wrap').hidden = method === 'balance';
+      const termSelect = document.getElementById('finance-term');
+      const graceOption = termSelect.querySelector('option[value="55"]');
+      graceOption.textContent = `Грейс-период · ${Math.max(0, Number(state.financeModel.graceDays))} дней`;
+      graceOption.hidden = method !== 'orta'; graceOption.disabled = method !== 'orta';
+      termSelect.value = String(state.financeTerm);
+      document.getElementById('market-credit-available').textContent = amountText(Math.max(0, Number(state.financeModel.ortaLimit) - state.ortaDebt));
+      document.getElementById('orta-limit-model').value = state.financeModel.ortaLimit;
+      document.getElementById('orta-apr-model').value = state.financeModel.ortaApr;
+      document.getElementById('orta-grace-model').value = state.financeModel.graceDays;
+      document.getElementById('partner-markup-model').value = state.financeModel.partnerMarkup;
+      const quote = financingQuote(amount);
+      let content = `<div class="finance-result-title">Расчёт · ${methodNames[method]}</div>`;
+      let canCheckout = amount > 0;
+      if (!amount) {
+        content += '<div class="finance-result-meta">Добавьте товар, чтобы увидеть сумму и график.</div>';
+        canCheckout = false;
+      } else if (method === 'balance') {
+        content += `<div class="finance-result-main"><span>Оплатить сейчас</span><strong>${amountText(amount)}</strong></div><div class="finance-result-meta">Демо-баланс: ${amountText(state.balance)}.</div>`;
+        if (amount > state.balance) { content += '<div class="finance-warning">На демо-балансе не хватает средств. Выберите другой способ.</div>'; canCheckout = false; }
+      } else if (method === 'orta' && state.financeTerm === 55) {
+        const graceDays = Math.max(0, Number(state.financeModel.graceDays));
+        content += `<div class="finance-result-main"><span>Сейчас</span><strong>0 ${state.currency}</strong></div><div class="finance-result-main"><span>Погасить в течение ${graceDays} дней</span><strong>${amountText(amount)}</strong></div><div class="finance-result-meta">Переплата по сценарию: 0 ${state.currency}. Полное погашение требуется до конца льготного периода.</div>`;
+      } else {
+        const months = Number(state.financeTerm);
+        const schedule = quote.payments.slice(0, Math.min(3, quote.payments.length)).map((payment, index) => `<span>${index + 1}: ${amountText(payment, false)}</span>`).join('');
+        const more = quote.payments.length > 3 ? `<span>+${quote.payments.length - 3}</span>` : '';
+        const feeNote = method === 'orta' ? `Ставка модели: ${Number(state.financeModel.ortaApr)}% годовых.` : `Надбавка клиента в модели: ${Number(state.financeModel.partnerMarkup)}%. Условия партнёра не заданы.`;
+        content += `<div class="finance-result-main"><span>Примерно в месяц · ${months} мес.</span><strong>${amountText(quote.monthly)}</strong></div><div class="finance-result-main"><span>Всего к оплате</span><strong>${amountText(quote.total)}</strong></div><div class="finance-result-meta">Переплата к цене заказа: ${amountText(quote.overpay)}. ${feeNote}</div><div class="finance-schedule">${schedule}${more}</div>`;
+        if (method === 'orta' && amount > Math.max(0, Number(state.financeModel.ortaLimit) - state.ortaDebt)) { content += '<div class="finance-warning">Покупка больше доступного лимита карты Orta в демо-модели.</div>'; canCheckout = false; }
+      }
+      result.innerHTML = content;
+      const checkout = document.getElementById('checkout-marketplace');
+      checkout.disabled = !canCheckout;
+      checkout.textContent = method === 'balance' ? 'Оплатить с баланса' : 'Перейти к подтверждению';
+    }
     function renderMarketplace() {
       document.getElementById('market-categories').innerHTML = marketCategories.map(category => `<button class="category-chip${category === activeMarketCategory ? ' active' : ''}" type="button" data-market-category="${category}">${category}</button>`).join('');
       const visible = products.filter(product => activeMarketCategory === 'Все' || product.category === activeMarketCategory);
-      document.getElementById('product-grid').innerHTML = visible.map(product => `<article class="product-card"><div class="product-art" aria-hidden="true">${product.emoji}</div><div class="product-name">${escapeHtml(product.name)}</div><div class="product-meta">${escapeHtml(product.detail)}</div><div class="product-price-row"><span class="product-price">${amountText(product.price)}</span><button class="product-add" type="button" data-add-product="${product.id}">В корзину</button></div></article>`).join('');
-      const entries = Object.entries(state.cart).filter(([, count]) => count > 0);
-      const total = entries.reduce((sum, [id, count]) => sum + products.find(product => product.id === id).price * count, 0);
+      document.getElementById('product-grid').innerHTML = visible.map(product => `<article class="product-card"><div class="product-art" aria-hidden="true">${product.emoji}</div><div class="product-name">${escapeHtml(product.name)}</div><div class="product-meta">${escapeHtml(product.detail)}</div><div class="product-finance">от ${amountText(Math.round(product.price / 3))}/мес. · 3 платежа в демо</div><div class="product-price-row"><span class="product-price">${amountText(product.price)}</span><button class="product-add" type="button" data-add-product="${product.id}">В корзину</button></div></article>`).join('');
+      const entries = marketEntries();
+      const total = marketTotal();
       document.getElementById('basket-count').textContent = entries.reduce((sum, [, count]) => sum + count, 0);
       document.getElementById('basket-total').textContent = amountText(total);
       document.getElementById('basket-list').innerHTML = entries.length ? entries.map(([id, count]) => { const product = products.find(item => item.id === id); return `<div class="basket-row"><div><div class="basket-item-name">${escapeHtml(product.name)}</div><div class="basket-item-total">${amountText(product.price * count)}</div></div><div class="basket-qty"><button type="button" data-cart-action="minus" data-product="${id}" aria-label="Уменьшить">−</button><span>${count}</span><button type="button" data-cart-action="plus" data-product="${id}" aria-label="Добавить">+</button></div></div>`; }).join('') : '<div class="basket-empty">Добавьте товары из каталога.</div>';
+      renderFinanceEstimate(total);
       renderQrPreview('pay-qr', 'ORTA-DEMO-CAFE-65000');
       renderQrPreview('receive-qr', 'ORTA-DEMO-RECEIVE-0001');
     }
@@ -629,6 +764,13 @@
     document.addEventListener('click', event => {
       const nav = event.target.closest('[data-nav]');
       if (nav) navigate(nav.dataset.nav);
+      const paymentChoice = event.target.closest('[data-payment-method]');
+      if (paymentChoice) {
+        state.paymentMethod = paymentChoice.dataset.paymentMethod;
+        if (state.paymentMethod !== 'orta' && state.financeTerm === 55) state.financeTerm = 3;
+        if (state.paymentMethod === 'orta' && ![55, 3, 6, 12].includes(state.financeTerm)) state.financeTerm = 55;
+        renderMarketplace();
+      }
       const category = event.target.closest('[data-market-category]');
       if (category) { activeMarketCategory = category.dataset.marketCategory; renderMarketplace(); }
       const addProduct = event.target.closest('[data-add-product]');
@@ -675,20 +817,27 @@
     document.getElementById('confirm-transfer').addEventListener('click', () => {
       const action = pendingAction;
       if (!action) return;
-      state.balance -= action.amount;
+      if (action.type !== 'market' || action.financing?.method === 'balance') state.balance -= action.amount;
       if (action.type === 'transfer') state.transactions.unshift({ name: `Перевод · ${action.recipient}`, detail: action.purpose || 'Исходящий демо-перевод', date: 'Только что', amount: -action.amount, type: 'out' });
       if (action.type === 'qr') state.transactions.unshift({ name: `QR · ${action.merchant}`, detail: 'Оплата по QR · демо', date: 'Только что', amount: -action.amount, type: 'out' });
-      if (action.type === 'market') { state.transactions.unshift({ name: `Маркет · ${action.count} поз.`, detail: 'Демо-заказ · без доставки', date: 'Только что', amount: -action.amount, type: 'out' }); state.cart = {}; }
+      if (action.type === 'market') {
+        const method = action.financing.method;
+        if (method === 'orta') state.ortaDebt += action.amount;
+        const paymentDetails = { orta: 'Кредитная карта Orta · демо', alif: 'Alif Nasiya · демо-график', split: 'Yandex Split · демо-график', balance: 'Баланс Orta · демо' };
+        state.transactions.unshift({ name: `Маркет · ${action.count} поз.`, detail: paymentDetails[method], date: 'Только что', amount: -action.amount, type: 'out' });
+        state.cart = {};
+      }
       closeModal(); pendingAction = null;
       if (action.type === 'transfer') document.getElementById('transfer-form').reset();
       render(); navigate('history');
-      showToast(action.type === 'transfer' ? 'Демо-перевод добавлен в историю. Деньги не отправлялись.' : action.type === 'qr' ? 'Демо-оплата добавлена в историю.' : 'Демо-заказ оформлен. Он никуда не отправлен.');
+      const marketToast = action.type === 'market' && action.financing.method !== 'balance' ? 'Демо-заказ оформлен по графику. Реальные деньги и кредит не выдавались.' : 'Демо-заказ оформлен. Он никуда не отправлен.';
+      showToast(action.type === 'transfer' ? 'Демо-перевод добавлен в историю. Деньги не отправлялись.' : action.type === 'qr' ? 'Демо-оплата добавлена в историю.' : marketToast);
     });
     document.getElementById('freeze-toggle').addEventListener('change', event => { state.frozen = event.target.checked; renderCardStatus(); showToast(state.frozen ? 'Демо-карта заморожена.' : 'Демо-карта активирована.'); });
     document.getElementById('history-search').addEventListener('input', renderHistory);
     document.getElementById('history-filter').addEventListener('change', renderHistory);
     document.getElementById('reset-demo').addEventListener('click', () => {
-      state = { balance: initialBalance, currency: state.currency, transactions: structuredClone(initialTransactions), frozen: false, transferType: 'phone', externalCards: structuredClone(initialExternalCards), profile: { ...initialProfile }, cart: {} };
+      state = { balance: initialBalance, currency: state.currency, transactions: structuredClone(initialTransactions), frozen: false, transferType: 'phone', externalCards: structuredClone(initialExternalCards), profile: { ...initialProfile }, cart: {}, ortaDebt: 0, paymentMethod: 'orta', financeTerm: 55, financeModel: { ...initialFinanceModel } };
       document.getElementById('transfer-form').reset(); document.getElementById('history-search').value = ''; document.getElementById('history-filter').value = 'all';
       document.getElementById('profile-form').hidden = true; document.getElementById('add-card-form').hidden = true;
       document.getElementById('edit-name').value = initialProfile.name; document.getElementById('edit-contact').value = initialProfile.contact;
@@ -729,14 +878,32 @@
       state.balance += amount; state.transactions.unshift({ name: `Перевод от ${sender}`, detail: 'Входящий перевод · демо', date: 'Только что', amount, type: 'in' });
       render(); showToast('Тестовый перевод зачислен на демо-баланс.');
     });
+    document.getElementById('finance-term').addEventListener('change', event => { state.financeTerm = Number(event.target.value); renderMarketplace(); });
+    ['orta-limit-model', 'orta-apr-model', 'orta-grace-model', 'partner-markup-model'].forEach(id => document.getElementById(id).addEventListener('change', event => {
+      const value = Number(event.target.value);
+      if (!Number.isFinite(value) || value < 0) { showToast('Введите положительный параметр демо-модели.'); renderMarketplace(); return; }
+      if (id === 'orta-limit-model') state.financeModel.ortaLimit = value;
+      if (id === 'orta-apr-model') state.financeModel.ortaApr = Math.min(100, value);
+      if (id === 'orta-grace-model') state.financeModel.graceDays = Math.min(120, Math.round(value));
+      if (id === 'partner-markup-model') state.financeModel.partnerMarkup = Math.min(100, value);
+      renderMarketplace();
+    }));
     document.getElementById('checkout-marketplace').addEventListener('click', () => {
       const entries = Object.entries(state.cart).filter(([, count]) => count > 0);
       const amount = entries.reduce((sum, [id, count]) => sum + products.find(product => product.id === id).price * count, 0);
       if (!amount) return showToast('Корзина пока пуста.');
-      if (amount > state.balance) return showToast('Заказ превышает демо-баланс.');
+      if (state.paymentMethod === 'balance' && amount > state.balance) return showToast('На демо-балансе не хватает средств.');
+      if (state.paymentMethod === 'orta' && amount > Math.max(0, Number(state.financeModel.ortaLimit) - state.ortaDebt)) return showToast('Заказ превышает доступный лимит Orta в демо-модели.');
       const count = entries.reduce((sum, [, quantity]) => sum + quantity, 0);
-      const details = entries.map(([id, quantity]) => `<div class="confirm-row"><span>${escapeHtml(products.find(product => product.id === id).name)} × ${quantity}</span><strong>${amountText(products.find(product => product.id === id).price * quantity)}</strong></div>`).join('') + `<div class="confirm-row"><span>Итого</span><strong>${amountText(amount)}</strong></div>`;
-      openConfirmation('Оформить демо-заказ?', 'Это только локальная симуляция покупки.', details, { type: 'market', amount, count });
+      const quote = financingQuote(amount);
+      const methodNames = { orta: 'Кредитная карта Orta', alif: 'Alif Nasiya · демо', split: 'Yandex Split · демо', balance: 'Баланс Orta' };
+      const details = entries.map(([id, quantity]) => `<div class="confirm-row"><span>${escapeHtml(products.find(product => product.id === id).name)} × ${quantity}</span><strong>${amountText(products.find(product => product.id === id).price * quantity)}</strong></div>`).join('') +
+        `<div class="confirm-row"><span>Товары</span><strong>${amountText(amount)}</strong></div><div class="confirm-row"><span>Способ оплаты</span><strong>${methodNames[state.paymentMethod]}</strong></div>` +
+        (state.paymentMethod === 'balance' ? `<div class="confirm-row"><span>Списание сейчас</span><strong>${amountText(amount)}</strong></div>` :
+          state.paymentMethod === 'orta' && state.financeTerm === 55 ? `<div class="confirm-row"><span>Грейс-период</span><strong>${state.financeModel.graceDays} дней · 0 ${state.currency} переплаты*</strong></div>` :
+            `<div class="confirm-row"><span>Платёж · ${state.financeTerm} мес.</span><strong>${amountText(quote.monthly)} × ${state.financeTerm}</strong></div><div class="confirm-row"><span>Всего / переплата</span><strong>${amountText(quote.total)} / ${amountText(quote.overpay)}</strong></div>`);
+      const financing = { method: state.paymentMethod, term: state.financeTerm, total: quote.total, monthly: quote.monthly, overpay: quote.overpay };
+      openConfirmation('Проверить демо-покупку', 'Проверьте способ оплаты и примерный график. Это не кредитное предложение.', details, { type: 'market', amount, count, financing });
     });
     document.getElementById('edit-profile-button').addEventListener('click', () => {
       const form = document.getElementById('profile-form');
